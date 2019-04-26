@@ -1,53 +1,53 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
+import React from 'react'
+import Helmet from 'react-helmet'
+import Footer from './Footer'
+import Navbar from './Navbar'
+import useSiteMetadata from './SiteMetadata'
 
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+const TemplateWrapper = ({ children }) => {
+  const { title, description } = useSiteMetadata()
+  return (
+    <div>
+      <Helmet>
+        <html lang="en" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
 
-import Header from "./header"
-import "./layout.css"
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/img/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/img/favicon-32x32.png"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/img/favicon-16x16.png"
+          sizes="16x16"
+        />
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
-    )}
-  />
-)
+        <link
+          rel="mask-icon"
+          href="/img/safari-pinned-tab.svg"
+          color="#ff4400"
+        />
+        <meta name="theme-color" content="#fff" />
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+        <meta property="og:type" content="business.business" />
+        <meta property="og:title" content={title} />
+        <meta property="og:url" content="/" />
+        <meta property="og:image" content="/img/og-image.jpg" />
+      </Helmet>
+      <Navbar />
+      <div>{children}</div>
+      <Footer />
+    </div>
+  )
 }
 
-export default Layout
+export default TemplateWrapper
