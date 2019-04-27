@@ -2,8 +2,8 @@
 templateKey: index-page
 title: Great coffee with a conscience
 image: /img/logo.png
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: sv-ilab testing
+subheading: testing again....
 mainpitch:
   title: Why Ben Halverson
   description: |
