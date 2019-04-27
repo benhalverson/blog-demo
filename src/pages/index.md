@@ -1,19 +1,18 @@
 ---
 templateKey: index-page
 title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
+image: /img/logo.png
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
   title: Why Ben Halverson
-  description: >
+  description: |
     test
-description: >-
-  test 2
+description: test 2
 intro:
   blurbs:
     - image: /img/coffee.png
-      text: >
+      text: |
         test 3
     - image: /img/coffee-gear.png
       text: >
@@ -58,3 +57,4 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+
