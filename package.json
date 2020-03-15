@@ -30,7 +30,7 @@
     "uuid": "3.3.2"
   },
   "devDependencies": {
-    "http-proxy-middleware": "0.19.1",
+    "http-proxy-middleware": "0.21.0",
     "netlify-lambda": "1.4.5",
     "prettier": "^1.17.0"
   },
